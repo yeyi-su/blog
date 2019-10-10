@@ -1,13 +1,16 @@
 h1 a {
     color: #FCA205;
-    font-family: 'Lobster';
+    font-family: 'Quicksand', sans-serif;
 }
 
 body {
     padding-left: 15px;
+    background-image: url('/static/images/fondo.jpg')
+   
+
 }
 .page-header {
-    background-color: #ff9400;
+    background-color: #9933ff;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
 }
@@ -23,7 +26,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .date {
@@ -48,8 +51,10 @@ h1, h2, h3, h4 {
 
 .post {
     margin-bottom: 70px;
+    color:#e6e6fa;
+    font-family: 'Mansalva', cursive;
 }
 
 .post h1 a, .post h1 a:visited {
-    color: #000000;
+    color: #00e5ce;
 }
