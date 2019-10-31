@@ -1,14 +1,14 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    {% for post in posts %}
+    {% for persona in personas %}
         <div class="persona">
             <div class="date">
-                {{ post.published_date }}
+                {{ persona.published_date }}
             </div>
-            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <h1><a href="{% url 'post_detail' pk=persona.pk %}">{{ persona.nombre }}</a></h1>
 
-            <p>{{ post.text|linebreaksbr }}</p>
+            <p>{{ persona.apellido|linebreaksbr }}</p>
         </div>
     {% endfor %}
 {% endblock %}

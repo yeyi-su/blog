@@ -2,18 +2,22 @@
 
 {% block content %}
     <div class="post">
-        {% if post.published_date %}
+        {% if persona.published_date %}
     <div class="date">
-        {{ post.published_date }}
+        {{ persona.published_date }}
     </div>
 {% else %}
-    <a class="btn btn-default" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
+    <a class="btn btn-default" href="{% url 'post_publish' pk=persona.pk %}">Publish</a>
 {% endif %}
-        <h1>{{ post.title }}</h1>
-        <p>{{ post.text|linebreaksbr }}</p>
+        <h1>{{ persona.apellido }}</h1>
+        <p>{{ persona.nombre|linebreaksbr }}</p>
+        <p> {{ persona.dni|linebreaksbr}} </p>
+        <p> {{persona.direccion|linebreaksbr}}</p>
+        <p>{{persona.fecha_de_nacimiento|linebreaksbr}} </p>
+        <p>{{persona.fecha_de_alta|linebreaksbr}}</p>
      {% if user.is_authenticated %}
-    <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
-    <a class="btn btn-default" href="{% url 'post_remove' pk=post.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+    <a class="btn btn-default" href="{% url 'post_edit' pk=persona.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+    <a class="btn btn-default" href="{% url 'post_remove' pk=persona.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
     {% endif %}
     </div>
 {% endblock %}

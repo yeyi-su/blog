@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<h1>Resultados de la busqueda:</h1>
+    {% if resultados %}
+    <ul>
+          {% for persona in resultados %}
+            <li>
+                <h1><a href="{% url 'post_detail' pk=persona.pk %}">{{ persona.apellido }}</a></h1>
+
+            </li>
+          {% endfor %}
+    {% else %}
+          <h2> No hay resultados </h2>
+    {% endif %}
+
+</ul>
+
+{% endblock %}

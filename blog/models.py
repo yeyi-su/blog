@@ -21,8 +21,5 @@ class Persona(models.Model):
         self.save()
 
     def __str__(self):
-        return self.nombre
+        return self.apellido+ "," + self.nombre
 
-
-    def __str__(self):
-        return self.apellido
